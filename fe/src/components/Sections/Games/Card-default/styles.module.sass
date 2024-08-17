@@ -1,0 +1,45 @@
+@import 'src/styles/sass/vars.sass'
+
+    
+.card
+    //box-shadow: $bxsd
+    border-radius: var(--brsXs)
+    background-color: $white
+    overflow: hidden
+    transition: $trs
+
+    &:hover, &:focus, &:active
+        box-shadow: $bxsd2
+
+    &_wrap
+        position: relative
+        padding-top: 50%
+
+        & > *
+            +ps(absolute, (t, 0), (l, 0))
+            +sz(100%, 100%)
+            object-fit: cover
+
+    &_content
+        padding: var(--gapSm)
+        text-align: center
+        background-color: $white
+        border: $bd2
+        border-top: 0
+
+    &_title
+        margin-bottom: var(--gap)
+        +ft(20, 20*1.4, 400)
+
+    &_btn
+        padding: 12px 24px
+        background-color: $main
+        color: $black
+        border-radius: var(--brsXs)
+        transition: $trs
+        //+ft(22, 22*1.4, 500)
+        +ft(17, 17*1.4, 600)
+
+        &:hover, &:active, &:focus
+            background-color: darken($main, 10%)
+        

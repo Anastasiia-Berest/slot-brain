@@ -1,0 +1,16 @@
+@import 'src/styles/sass/vars.sass'
+
+.cursor
+    position: fixed
+    pointer-events: none
+    z-index: 1000
+    
+    &_inner
+        +sz(15px, 15px)
+        background-color: rgba($main, 0.7)
+        border-radius: 50%
+        position: absolute
+        transform: translate(-50%, -50%)
+        transition: transform 0.1s ease-out
+
+

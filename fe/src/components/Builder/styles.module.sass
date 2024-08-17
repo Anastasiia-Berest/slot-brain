@@ -1,0 +1,36 @@
+@import 'src/styles/sass/vars.sass'
+
+.quote
+    margin-top: var(--gapMd)
+    margin-bottom: var(--gapMd)
+    padding-left: var(--gapMd)
+    border-left: 16px solid $main
+
+    &_title
+        +ft(22, 22, 700)
+        color: $grey3
+
+.table
+    table
+        width: 100%
+        margin: var(--gapMd) auto
+        background-color: $white
+        border-radius: var(--brsXs)
+        overflow: hidden
+       
+        td, th
+            padding: 8px 12px
+            border: $bd2
+            border-bottom-width: 0
+            text-align: left
+
+        th
+            color: $grey3
+
+        td
+            span:not(:last-child)::after
+                content: ', '
+
+        tr:last-child
+            td, th
+                border-bottom: $bd2

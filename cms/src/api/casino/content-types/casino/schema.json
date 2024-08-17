@@ -1,0 +1,178 @@
+{
+  "kind": "collectionType",
+  "collectionName": "casinos",
+  "info": {
+    "singularName": "casino",
+    "pluralName": "casinos",
+    "displayName": "[2] Casino",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "casino_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::casino-type.casino-type"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "game_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game-type.game-type",
+      "inversedBy": "casinos"
+    },
+    "casino_providers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::casino-provider.casino-provider",
+      "inversedBy": "casinos"
+    },
+    "payment_methods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::payment-method.payment-method",
+      "inversedBy": "casinos"
+    },
+    "licence": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::licence.licence",
+      "inversedBy": "casinos"
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::language.language",
+      "inversedBy": "casinos"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::country.country",
+      "inversedBy": "casinos"
+    },
+    "currencies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::currency.currency",
+      "inversedBy": "casinos"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "profit": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "rating": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "decimal"
+    },
+    "builder": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "builder.markdown",
+        "builder.props-and-cons",
+        "builder.quote",
+        "builder.providers",
+        "builder.bonuses",
+        "builder.game-table",
+        "builder.accordion",
+        "builder.feature-list",
+        "builder.link-list"
+      ]
+    },
+    "apps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::app.app",
+      "inversedBy": "casinos"
+    }
+  }
+}

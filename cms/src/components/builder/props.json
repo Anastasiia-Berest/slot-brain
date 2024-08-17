@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_builder_props",
+  "info": {
+    "displayName": "Props",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_builder_accordions",
+  "info": {
+    "displayName": "Accordion",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "FAQ": {
+      "type": "component",
+      "repeatable": true,
+      "component": "builder.faq"
+    }
+  }
+}

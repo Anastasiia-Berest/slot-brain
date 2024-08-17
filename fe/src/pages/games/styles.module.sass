@@ -1,0 +1,26 @@
+@import 'src/styles/sass/vars.sass'
+
+.cards
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    gap: var(--gapMd)
+
+    &_content
+        margin-bottom: var(--gapLg)
+        margin-top: var(--gapMd) 
+
+        h2
+            margin-bottom: var(--gap)
+            margin-top: 0
+
+        p
+            margin-bottom: var(--gap)
+            margin-top: var(--gap)
+
+.game
+    &_data
+        table
+            text-align: left
+            td
+                padding: 2px 15px
+

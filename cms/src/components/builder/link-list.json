@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_builder_link_lists",
+  "info": {
+    "displayName": "Link-list",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "builder.links"
+    }
+  }
+}

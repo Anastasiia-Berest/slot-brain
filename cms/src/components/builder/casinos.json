@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_builder_casinos",
+  "info": {
+    "displayName": "Casinos",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "casinos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::casino.casino"
+    }
+  }
+}

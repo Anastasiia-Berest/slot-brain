@@ -1,0 +1,59 @@
+a
+    &:hover, &:focus, &:active
+        color: inherit
+
+.page
+    margin-top: var(--gapMd)
+    margin-bottom: var(--gapXlg)
+    color: $grey3
+
+    & > h1, h2, h3, h4, h5, h6
+        margin-top: var(--gapMd)
+        margin-bottom: var(--gap)
+    
+    p
+        margin-top: var(--gap)
+        margin-bottom: var(--gap)
+
+    & > *:first-child
+        margin-top: 0
+      
+    &-without-breadcrumbs
+        margin-top: var(--gapXlg)
+
+    &-sidebar
+        +flex(flex, flex-start, flex-start, wrap)
+        gap: var(--gapLg)
+
+        & > section
+            flex: 1
+
+            & > div:first-child > *:first-child
+                margin-top: 0
+
+        aside
+            max-width: 300px
+            width: 100%
+
+            h2, h3, h4, h5, h6
+                text-transform: uppercase
+                +ft(16, 16*1.2, 700)
+
+        +maw($md)
+            aside
+                display: none
+
+
+    &-error
+        +flex(flex, center, center, nowrap, column)
+        height: 100%
+        padding: var(--gapXlg) 0
+        text-align: center
+
+        h1
+            font-weight: 900
+            font-size: 10em
+            line-height: 1
+            color: $main
+        
+       

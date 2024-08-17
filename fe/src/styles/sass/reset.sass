@@ -1,0 +1,57 @@
+html, body 
+    display: flex
+    //height: 100%
+    flex: 1
+    font-family: $ffText, $ffBack
+    scroll-behavior: smooth
+
+
+body
+    display: flex
+    flex-direction: column
+
+
+*
+    //user-select: none
+    box-sizing: border-box
+    //transition: $trs
+    scroll-behavior: smooth
+    
+    &::selection
+        background-color: $main
+        color: $black
+
+    &::-webkit-scrollbar
+        +sz(15px, 15px)
+
+    &::-webkit-scrollbar-track
+        background-color: $black
+
+    &::-webkit-scrollbar-thumb
+        background: $main
+
+
+a
+    text-decoration: none
+    color: inherit
+    &:hover, &:focus
+        text-decoration: none
+
+img
+    user-select: none
+
+svg
+    cursor: pointer	
+
+button, a, input 
+    &:hover, &:active, &:focus, &:focus-within
+        appearance: none
+        outline: none
+        box-shadow: none 
+
+
+// [class*=hero] + [class*=page], [class*=hero] + section
+//     margin-top: var(--gap)
+
+[class*=hero] + section
+    margin-top: var(--gap)

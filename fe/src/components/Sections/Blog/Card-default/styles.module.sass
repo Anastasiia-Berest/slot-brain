@@ -1,0 +1,64 @@
+@import 'src/styles/sass/vars.sass'
+
+.card
+    +flex(flex, flex-start, space-between, nowrap, column)
+    box-shadow: $bxsd
+    border-radius: var(--brsXs)
+    background-color: $white
+    transition: $trs
+
+    &:hover, &:focus, &:active
+        box-shadow: 0 3px 10px 0 rgba($black, .5)
+
+    &:first-child
+        .card_wrap
+            padding-top: 25%
+
+    &_content
+        +flex(flex, flex-start, space-between, nowrap, column)
+        flex: 1
+        width: 100%
+        padding: var(--gap) var(--gapSm)
+
+    &_title
+        margin-bottom: 0
+        text-transform: uppercase
+        +ft(22, 22*1.4, 400)
+
+    &_description
+        margin-bottom: var(--gapMd)
+        +ft(17, 17*1.4, 400)
+        color: rgba($black, 0.55)
+
+    &_info
+        +flex(flex, center, space-between, wrap)
+        gap: var(--gapXs)
+        +ft(13, 13, 400)
+        color: rgba($black, 0.5)
+
+        div
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: var(--gap)
+            align-items: center
+        
+        span
+            display: flex
+            gap: var(--gapXs)
+            align-items: center
+
+    &_wrap
+        position: relative
+        width: 100%
+        padding-top: 50%
+        overflow: hidden
+        border-radius: var(--brsXs) var(--brsXs) 0 0
+
+        & > *
+            +ps(absolute, (l, 0), (t, 0))
+            +sz(100%, 100%)
+            object-fit: cover
+                
+    +maw($sm)
+        &_title
+            +ft(15, 15*1.4, 600)

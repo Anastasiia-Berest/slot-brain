@@ -1,0 +1,55 @@
+@import 'src/styles/sass/vars.sass'
+
+.subscribe
+    position: relative
+    z-index: 1
+    padding: var(--gapXlg) 0
+    text-align: center
+    color: $white
+
+    h2 + p
+        +ft(22, 22*1.4, 400)
+
+    &_container
+        max-width: 800px
+        margin-left: auto
+        margin-right: auto
+
+    img
+        +ps(absolute, (t, 0), (l, 0))
+        z-index: -1
+        object-fit: cover
+        +sz(100%, 100%)
+
+    &_text
+        margin-top: var(--gapSm)
+        margin-bottom: var(--gapLg)
+
+    &_note
+        width: 80%
+        margin-top: var(--gapSm)
+        margin-left: auto
+        margin-right: auto
+        +ft(15, 15*1.4, 500)
+        color: rgba($white, 0.5)
+
+        a,b
+            color: $white
+    
+
+    &::after
+        content: ''
+        display: block
+        +sz(100%, 100%)
+        +ps(absolute, (t, 0), (l, 0))
+        z-index: -1
+        background-color: rgba($black, 0.3)
+
+
+
+    +maw($md)
+        h2 + p
+            +ft(15, 15*1.4, 400)
+
+        &_note
+            +ft(12, 12*1.4, 400)

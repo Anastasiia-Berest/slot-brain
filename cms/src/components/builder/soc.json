@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_builder_socs",
+  "info": {
+    "displayName": "Soc",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "network": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "twitter",
+        "instagram",
+        "youtube",
+        "telegram"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_builder_props_and_cons",
+  "info": {
+    "displayName": "Props&Cons",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "Props": {
+      "displayName": "Props",
+      "type": "component",
+      "repeatable": true,
+      "component": "builder.props"
+    },
+    "Cons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "builder.cons"
+    }
+  }
+}

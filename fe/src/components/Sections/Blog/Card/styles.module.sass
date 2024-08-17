@@ -1,0 +1,89 @@
+@import 'src/styles/sass/vars.sass'
+
+.card
+    +flex(flex, flex-start, space-between, nowrap, column)
+    box-shadow: $bxsd
+    border-radius: var(--brsXs)
+    border: $bd2
+    background-color: $white
+    transition: $trs
+
+    &:hover, &:focus, &:active
+        box-shadow: 0 3px 10px 0 rgba($black, .5)
+
+    &_content
+        +flex(flex, flex-start, space-between, nowrap, column)
+        flex: 1
+        width: 100%
+        padding: var(--gap) var(--gapSm)
+        color: $grey3
+
+    &_title
+        width: 100%
+        margin-bottom: var(--gapXs)
+        padding: var(--gapXs) 0
+        +ft(18, 18*1.4, 700)
+
+    &_description
+        margin-bottom: var(--gapMd)
+        +ft(17, 17*1.4, 400)
+        color: rgba($black, 0.55)
+
+    &_chip
+        +ps(absolute, (t, 10px), (l, 10px))
+        padding: 8px 12px
+        background: $white
+        border-radius: 4px
+        text-transform: uppercase
+        +ft(16, 16, 700)
+        color: darken($main, 10%)
+
+    &_header
+        +flex(flex, center, flex-start, nowrap)
+        gap: var(--gap)
+        column-gap: var(--gapXs)
+        width: 100%
+        padding-bottom: var(--gapXs)
+        margin-bottom: var(--gapXs)
+        border-bottom: 1px solid rgba($grey3, 0.2)
+
+        span
+            +flex(flex, center, flex-start, nowrap)
+            gap: var(--gapXs)
+            +ft(12, 12*1.2, 400)
+
+            svg
+                min-width: 16px
+
+    &_footer
+        width: 100%
+        +flex(flex, center, space-between, wrap)
+        gap: var(--gapXs)
+        padding-top: var(--gap)
+        +ft(13, 13, 400)
+        color: rgba($black, 0.5)
+        border-top: 1px solid rgba($grey3, 0.2)
+
+        div
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: var(--gap)
+            align-items: center
+        
+        span
+            display: flex
+            gap: var(--gapXs)
+            align-items: center
+
+    &_wrap
+        position: relative
+        width: 100%
+        padding-top: 50%
+        overflow: hidden
+        border-radius: var(--brsXs) var(--brsXs) 0 0
+
+        & > img
+            +ps(absolute, (l, 0), (t, 0))
+            +sz(100%, 100%)
+            object-fit: cover
+                

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_builder_quotes",
+  "info": {
+    "displayName": "Quote",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

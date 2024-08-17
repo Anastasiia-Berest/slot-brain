@@ -1,0 +1,34 @@
+@import 'src/styles/sass/vars.sass'
+
+
+.form
+    max-width: 400px
+    width: 100%
+    margin: var(--gapMd) auto
+
+    &_row
+        margin-bottom: var(--gap)
+
+    input
+        width: 100%
+        padding: 10px 16px
+        background-color: $white
+        border: none
+        border-bottom: 2px solid $main
+
+
+    button
+        width: 100%
+        margin-bottom: var(--gapXs)
+        padding: 16px
+        background-color: $main
+        border: none
+        +ft(16, 16, 700)
+
+        &:hover, &:active, &:focus-visible
+            background-color: darken($main, 10%)
+
+    label
+        display: block
+        margin-bottom: var(--gapXs)
+        +ft(14, 14, 700)

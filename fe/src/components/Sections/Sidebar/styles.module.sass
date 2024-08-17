@@ -1,0 +1,25 @@
+@import 'src/styles/sass/vars.sass'
+
+.block
+    &_links
+        padding: var(--gap)
+        background-color: $white
+        color: $grey4
+        border: $bd2
+        border-radius: var(--brsXs)
+
+        a
+            display: block
+            margin: var(--gapXs) 0
+            transition: $trs
+
+            &:first-child
+                margin-top: 0
+
+            &:last-child
+                margin-bottom: 0
+
+            &:hover, &:active, &:focus
+                text-decoration: underline
+                color: $grey3
+

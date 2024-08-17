@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_builder_cons",
+  "info": {
+    "displayName": "Cons",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    }
+  }
+}

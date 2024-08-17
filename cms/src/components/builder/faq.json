@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_builder_faqs",
+  "info": {
+    "displayName": "faq",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

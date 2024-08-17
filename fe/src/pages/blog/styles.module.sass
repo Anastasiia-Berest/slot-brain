@@ -1,0 +1,98 @@
+@import 'src/styles/sass/vars.sass'
+
+.post
+    &_img
+        position: relative
+        padding-top: 50%
+        margin-bottom: var(--gapMd)
+        border-radius: var(--brsXs)
+        overflow: hidden
+
+        & > img
+            +ps(absolute, (t, 0), (l, 0))
+            +sz(100%, 100%)
+            object-fit: cover
+
+    &_info
+        position: relative
+        width: auto
+        margin: var(--gap)
+        padding: var(--gapSm)
+        gap: var(--gap)
+        margin-top: var(--gap)
+        background-color: $white
+        color: $grey3
+        border-radius: var(--brsXs)
+
+        &_footer, &_header
+            +flex(flex, center, flex-start, wrap)
+            gap: var(--gapXs)
+
+            div
+                +flex(flex, center, flex-start, wrap)
+                gap: var(--gap) 
+                row-gap: 4px
+
+            span
+                +flex(flex, center, flex-start, nowrap)
+                gap: var(--gapXs)
+
+        &_footer
+            justify-content: space-between
+
+    &_content
+        margin-bottom: var(--gapLg)
+
+        img
+            max-width: 100%
+            width: 100%
+            border-radius: var(--brsXs)
+            object-fit: cover
+
+        h2, h3
+            +ft(40, 40*1.4, 700)
+
+        h4, h5
+            +ft(28, 28*1.4, 700)
+
+
+    &_cat
+        +flex(flex, center, flex-start, wrap)
+        padding: 10px 12px
+        border-radius: var(--brsXs)
+        background-color: lighten($main, 20%)
+        color: darken($main, 20%)
+        text-transform: uppercase
+        +ft(13, 13, 700)
+
+    &_title
+        margin-top: var(--gap)
+        margin-bottom: var(--gapXs)
+        +ft(33, 33*1.2, 700)
+
+.blog
+    &_sections
+        &_all
+            +flex(flex, stretch, flex-start, wrap)
+            gap: var(--gapMd)
+            & > a
+                width: calc(25% - 24px)
+                
+                &:nth-child(5), &:nth-child(6), &:nth-child(7)
+                    width: calc(33% - 24px)
+
+            +maw(1140)
+                & > a
+                    width: calc(33% - 24px)
+
+            +maw(840)
+                & > a
+                    &, &:nth-child(5), &:nth-child(6), &:nth-child(7)
+                        width: calc(50% - 24px)
+
+            +maw(580)
+                justify-content: center
+                & > a
+                    &, &:nth-child(5), &:nth-child(6), &:nth-child(7)
+                        width: calc(100% - 24px)
+                    

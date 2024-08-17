@@ -1,0 +1,21 @@
+@import 'src/styles/sass/vars.sass'
+
+
+.share
+    +flex(flex, center, flex-start, wrap)
+    gap: var(--gap)
+    border-radius: var(--brsXs)
+
+    a, button
+        +flex(flex, center, center, nowrap)
+        +sz(56px, 56px)
+        box-shadow: $bxsd1
+        background-color: $white
+        color: $grey4
+        //border: $bd2
+        border-radius: var(--brsXs)
+        transition: $trs
+
+        &:hover, &:focus, &:active
+            box-shadow: none
+            color: $main

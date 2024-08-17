@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_builder_game_tables",
+  "info": {
+    "displayName": "Casino-Table",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Year_launched": {
+      "type": "string"
+    },
+    "Number_of_Games": {
+      "type": "string"
+    },
+    "Support_Email": {
+      "type": "string"
+    },
+    "Phone_Number": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
+    }
+  }
+}

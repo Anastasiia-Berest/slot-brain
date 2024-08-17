@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_builder_feature_lists",
+  "info": {
+    "displayName": "Feature-list",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "Feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "builder.feature"
+    }
+  }
+}

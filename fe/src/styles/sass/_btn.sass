@@ -1,0 +1,129 @@
+.soc
+    display: inline-flex
+    gap: 16px
+    margin-top: 24px
+
+    a
+        +flex(flex, center, center, nowrap)
+        +sz(40px, 40px)
+        border-radius: 50%
+        transition: $trs
+        color: $black
+        background-color: $white
+        &:hover, &:active, &:focus
+            transform: scale(1.1) rotate(-15deg)
+
+        & > *
+            color: $black
+
+.btn
+    position: relative
+    z-index: 1
+    +flex(inline-flex, center, center)
+    min-width: 260px
+    padding: 18px 24px
+    border-radius: 6px
+    background-color: $main
+    color: $black
+    transition: $trs
+    //+ft(22, 22*1.2, 600)
+    +ft(17, 17*1, 700)
+    text-transform: uppercase
+    text-align: center
+    transition: $trs
+    overflow: hidden
+  
+    &::before
+        content: ""
+        position: absolute
+        +sz(100%, 100%)
+
+    &:hover::before
+        opacity: 0
+    
+    &::after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        +sz(25em, 25em)
+        background-color: darken($secondary, 2%)
+        border-radius: 50%
+        transform: translate(-50%, -50%) scale(0.1)
+        opacity: 0
+        z-index: -1
+        transition: transform 0.3s, opacity 0.3s, background-color 0.3s
+    
+    &:hover::after
+        opacity: 1
+        transform-origin: 100px 100px
+        transform: scale(1) translate(-50%, -50%)
+    
+  
+    &:hover, &:active, &:focus
+        background-color: darken($main, 10%)
+        color: $white
+
+
+    +maw($md)
+        +ft(16, 16*1.2, 600)
+
+    &-bd
+        background-color: transparent
+        border: 2px solid $white
+        color: $white
+
+        &::before
+            color: $white
+
+        &::after
+            color: $white
+        
+        &:hover, &:active, &:focus
+            background-color: transparent
+            border-color: transparent
+
+    &-text
+        min-width: 0
+        padding: 0
+        background: transparent
+        color: inherit
+        
+        &:hover, &:active, &:focus
+            background-color: transparent
+            color: $main
+            &::before
+                color: $white
+                display: none
+            &::after
+                color: $black
+                display: none
+
+    &-trs
+        padding: 0
+        background: transparent
+        text-decoration: underline
+
+      
+        &:hover, &:active, &:focus
+            background-color: transparent
+            color: darken($main, 10%)
+            &::before, &::after
+                display: none
+
+    &-icon
+        min-width: 0
+        gap: var(--gapXs)
+        padding: 12px 18px
+        background-color: $white
+        border: $bd2
+        text-transform: capitalize
+
+
+
+.chip
+    padding: 5px 15px
+    border-radius: 20pc
+    background-color: lighten($main, 25%)
+    color: darken($main, 10%)
+    +ft(12, 12*1.2, 500)

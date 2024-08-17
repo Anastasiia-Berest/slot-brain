@@ -1,0 +1,35 @@
+@import 'src/styles/sass/vars.sass'
+
+.bonus
+    &_logo
+        display: inline-flex
+        padding: 10px
+        border-radius: var(--brsXs)
+        background-color: $black
+
+    table
+        text-align: left
+        td
+            padding: 5px 15px
+
+    &_content
+
+        & > *:first-child
+            margin-top: 0
+
+    &_related
+        margin-top: var(--gapLg)
+        margin-bottom: var(--gapLg)
+
+.cards
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+    gap: var(--gapMd)
+    
+    &_wrap
+        padding-bottom: var(--gapLg)
+
+    &_content
+        padding-top: var(--gapLg)
+
+    

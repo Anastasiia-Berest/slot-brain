@@ -1,0 +1,85 @@
+@import 'src/styles/sass/vars.sass'
+
+.card
+    position: relative
+    +flex(flex, center, flex-start, nowrap)
+    gap: var(--gap)
+    margin: var(--gap) 0
+    padding: var(--gapXs)
+    border-radius: var(--brsXs)
+    border: $bd2
+    background-color: $white
+
+    &:hover
+        .card_cta
+            display: flex
+
+    &.dark
+        background-color: lighten($black, 8%)
+        border-color: $black
+
+        .card_cta
+            background-color: lighten($black, 8%)
+
+        .card_rating
+            background-color: lighten($black, 15%)
+
+    &_content
+        position: relative
+        flex: 1
+
+    &_img
+        position: relative
+        border-radius: var(--brsXs)
+        overflow: hidden
+        +sz(100px, 75px)
+
+        & > *
+            +ps(absolute)
+            +sz(100%, 100%)
+            object-fit: cover
+
+    &_cta
+        position: absolute
+        inset: 0
+        
+        flex-direction: column
+        margin: auto
+        +sz(100%, 100%)
+        text-align: center
+        background-color: $white
+
+        display: none
+
+    &_btn
+        min-width: 0
+        width: 100%
+        padding: 10px 12px
+        +ft(14, 14, 600)
+
+        &_text
+            display: inline-block
+            margin: var(--gapXs) auto 0
+            color: inherit
+            text-transform: initial
+            text-decoration: underline
+            font-size: 12px
+
+
+    &_title
+        b
+            display: block
+            +ft(18, 18, 700)
+
+    &_rating
+        +flex(inline-flex, center, center, nowrap)
+        gap: 4px
+        margin-top: var(--gapXs)
+        padding: 8px 12px
+        background-color: $grey2
+        border-radius: var(--brsXs)
+        text-transform: uppercase
+        +ft(14, 14, 700)
+
+        svg
+            fill: $main

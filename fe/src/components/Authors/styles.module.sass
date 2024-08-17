@@ -1,0 +1,59 @@
+@import 'src/styles/sass/vars.sass'
+
+.author
+    border: $bd2
+    border-radius: var(--brsXs)
+    background-color: $white
+    color: $grey4
+    overflow: hidden
+
+    & > div
+        padding: 0
+
+    b
+        color: $grey3
+
+    &_header
+        +flex(flex, center, flex-start, wrap)
+        gap: var(--gapMd)
+        padding: var(--gapMd)
+        background-color: $black
+        color: $white
+        border-radius: var(--brsXs) var(--brsXs) 0 0
+
+        & > div:last-child
+            margin-left: auto
+
+    &_img
+        position: relative
+        +sz(72px, 72px)
+        border-radius: var(--brsXs)
+        overflow: hidden
+
+        & > *
+            +ps(absolute, (t, 0), (l, 0))
+            +sz(100%, 100%)
+            object-fit: cover
+
+    &_content
+        padding: var(--gapMd)
+
+        ul
+            margin-top: var(--gapXs)
+
+            a
+                text-decoration: underline
+
+    &_description
+        margin-bottom: var(--gapSm)
+        +ft(16, 16*1.4, 500)
+
+    &_name
+        +flex(flex, center, flex-start, nowrap)
+        gap: var(--gap)
+        margin-bottom: var(--gapXs)
+        +ft(20, 20*1.2, 700)
+
+    &_btn
+        min-width: 0
+        +ft(15, 15, 700)

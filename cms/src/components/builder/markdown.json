@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_builder_markdowns",
+  "info": {
+    "displayName": "Markdown",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import 'src/styles/sass/vars.sass'
+
+.cards
+    display: grid
+    gap: var(--gapMd)
+    grid-template-columns: 2fr 1fr 1fr
+    margin-top: var(--gapLg)
+
+                
+
++maw($md)
+    .cards
+        grid-template-columns: 1fr 1fr 1fr
+
+    .card
+        &_title
+            +ft(16, 16*1.4, 700)
+        
+        &:first-child
+            .card_wrap
+                padding-top: 50%
+
++maw($sm)
+    .cards
+        grid-template-columns: 1fr 1fr
+    
+
++maw($xs)
+    .cards
+        grid-template-columns: 1fr

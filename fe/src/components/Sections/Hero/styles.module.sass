@@ -1,0 +1,20 @@
+@import 'src/styles/sass/vars.sass'
+@import './Slider/styles.module.sass'
+
+
+.hero
+    &_slide
+        height: auto
+        text-align: center
+        justify-content: center
+
+    &_title
+        +ft(100, 100, 900)
+
+    &_description
+        &, b
+            +ft(18, 18*1.4, 500)
+
+    +maw($sm)
+        &_title
+            font-size: 4em

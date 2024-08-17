@@ -1,0 +1,50 @@
+@import 'src/styles/sass/vars.sass'
+
+
+.hero
+    padding: var(--gapMd) var(--gap)
+    background-color: $black
+    color: $white
+    border: 1px solid rgba($white, 0.5)
+    border-width: 1px 0 0
+
+    & > div
+        +flex(flex, center, flex-start, wrap)
+        gap: var(--gap)
+
+    &_img
+        position: relative
+        +flex(flex, center, center, nowrap)
+        +sz(162px, 81px)
+        border-radius: var(--brsXs)
+        overflow: hidden
+        background-color: $black
+
+        & > *
+            +ps(absolute)
+            inset: 0
+            margin: auto
+            +sz(100%, auto)
+            object-fit: contain
+            border-radius: var(--brsXs)
+
+    &_title
+        +ft(48, 48, 700)
+
+    &_cat
+        +flex(inline-flex, center, center, nowrap)
+        gap: 4px
+        padding: 8px 10px
+        border-radius: var(--brsXs)
+        background-color: lighten($dark, 10%)
+        +ft(14, 14, 700)
+        
+        svg
+            fill: $main
+
+    &_header
+        +flex(flex, flex-start, center, wrap, column)
+        gap: var(--gap)
+
+    &_banner
+        margin-top: var(--gap)

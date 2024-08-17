@@ -1,0 +1,62 @@
+@import 'src/styles/sass/vars.sass'
+
+.bonus
+    padding: var(--gapMd) var(--gap)
+    background-color: $black
+    color: $white
+    border: 1px solid rgba($white, 0.5)
+    border-width: 1px 0
+
+    h1
+        +ft(48, 48, 900)
+
+    &_header
+        +flex(flex, center, flex-start, wrap)
+        gap: var(--gap)
+        margin-top: var(--gapXs)
+        +ft(16, 16*1.2, 700)
+
+        b   
+            font-weight: 400
+
+        span
+            +flex(flex, center, flex-start, wrap)
+            gap: var(--gapXs)
+
+            svg
+                fill: $main
+
+    &_content
+        +ft(16, 16*1.2, 700)
+
+        b   
+            font-weight: 400   
+        
+        span:not(:last-child):after
+            content: ','
+            margin-right: 4px
+
+
+    &_description
+        margin-top: var(--gapXs)
+        margin-bottom: var(--gapXs)
+        +ft(32, 32*1.4, 700)
+
+    &_info
+        +flex(flex, center, flex-start, wrap)
+        gap: var(--gap)
+
+    &_footer
+        +flex(flex, center, flex-start, wrap)
+        gap: var(--gapXs)
+        margin-top: var(--gap)
+        
+    &_btn
+        min-width: 0   
+        padding: 5px 10px
+        +ft(14, 14, 600)
+
+    &_cat
+        padding: 10px 16px
+        border-radius: var(--brsXs)
+        background-color: lighten($black, 10%)

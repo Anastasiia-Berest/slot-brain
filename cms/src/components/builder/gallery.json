@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_builder_galleries",
+  "info": {
+    "displayName": "Gallery",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

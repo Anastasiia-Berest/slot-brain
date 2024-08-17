@@ -1,0 +1,87 @@
+@import 'src/styles/sass/vars.sass'
+
+
+.card
+    display: grid
+    align-items: center
+    grid-template-columns: 1.5fr 3fr 1fr
+    gap: var(--gap)
+    padding: var(--gap)
+    background-color: $white
+    border: $bd2
+    border-width: 1px 1px 0
+    &:first-child
+        border-radius: var(--brsXs) var(--brsXs) 0 0
+    &:last-child
+        border-bottom-width: 1px
+        border-radius: 0 0 var(--brsXs) var(--brsXs)
+
+    &_img
+        position: relative
+        +flex(flex, center, center, nowrap)
+        +sz(100px, 75px)
+        border-radius: var(--brsXs)
+        background-color: $black
+        overflow: hidden
+
+        & > *
+            +ps(absolute)
+            +sz(80%, 80%)
+            object-fit: contain
+
+    &_logo
+        +flex(flex, center, flex-start, nowrap)
+        gap: var(--gap)
+        text-align: left
+
+    &_cta
+        display: flex
+        flex-direction: column
+        gap: var(--gap)
+        margin-left: auto
+
+    &_btn
+        min-width: 0
+        padding: 12px 16px
+        +ft(14, 14, 600)
+
+        &_link
+            text-decoration: underline
+            text-transform: initial
+
+    &_title
+        +ft(17, 17, 700)
+
+    &_description
+        +ft(20, 20*1.2, 700)
+        color: $grey3
+        small
+            display: block
+            text-transform: uppercase
+            +ft(14, 14, 700)
+            color: $grey4
+
+    +maw(640)
+        grid-template-columns: 0.5fr 2fr
+
+        & > div
+            &:nth-child(2)
+                grid-column: 1/-1
+                order: 2
+                text-align: center
+
+        &_cta
+            flex-direction: row
+
+    +maw(500)
+        grid-template-columns: auto 1fr 
+
+        div
+            &:nth-child(1),
+            &:nth-child(3)
+                grid-column: 1/-1
+                width: 100%
+                justify-content: center
+            &:nth-child(3)
+                order: 2
+            

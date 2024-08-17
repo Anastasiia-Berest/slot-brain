@@ -1,0 +1,107 @@
+@import 'src/styles/sass/vars.sass'
+
+.header
+    background-color: $black
+    color: $white
+    
+    &_btm
+        text-align: center
+        padding-top: 20px
+        padding-bottom: 20px
+
+    &_top
+        padding-top: 20px
+        padding-bottom: 20px
+        border-bottom: 1px solid rgba($white, 0.5)
+
+        & > div
+            +flex(flex, center, space-between, wrap)
+            gap: var(--gap)
+
+    &_nav
+        +flex(flex, center, center, wrap)
+        column-gap: var(--gapLg)
+        +ft(22, 22*1.2, 500)
+
+        a
+            transition: $trs
+            &:hover, &:focus, &:active
+                color: $main
+
+    &_cta, &_action
+        +flex(flex, center, center, wrap)
+        gap: var(--gap)
+
+    &_btn
+        min-width: 0
+        padding: 10px 15px
+       
+
+    &_cta
+        a   
+            +ft(17, 17*1, 700)
+
+        span
+            display: block
+            margin-right: 10px
+            +sz(2px, 100%)
+            border-right: 2px solid rgba($white, 0.5)
+    
+    &_drawer, &_toggle
+        display: none
+
+    &_drawer
+        padding-top: 26px
+        padding-bottom: 26px
+
+    &_info
+        padding: 26px 0
+        text-align: center
+        background-color: $white
+        color: $black
+        +ft(15, 15*1.2, 400)
+
+
+    &_contacts
+        +flex(flex, center, center, wrap)
+        gap: var(--gap)
+        margin-top: var(--gap)
+        +ft(13, 13*1.2, 500)
+
+        a
+            +flex(flex, center, center, nowrap)
+            gap: var(--gapXs)
+
+    +maw(840)
+        &_action, &_btm
+            display: none
+
+        &_nav
+            flex-direction: column
+            padding-top: 26px
+
+            a
+                display: block
+                width: 100%
+                padding: 10px
+                text-align: left
+                border: 1px solid $black
+                border-width: 1px 0 0
+                color: $black
+                background-color: $white
+                &:last-child
+                    
+                    border-bottom: 1px solid $black
+        
+        &_cta
+            padding: 26px 0 0
+
+        &_toggle
+            display: block
+
+
+        .show
+            display: block
+
+        .hide
+            display: none

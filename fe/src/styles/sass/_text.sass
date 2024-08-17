@@ -1,0 +1,128 @@
+
+
+h2
+    +ft(43, 43*1.2, 500)
+
+    +maw($md)
+        +ft(20, 20*1.2, 700)
+        text-transform: uppercase
+
+.section
+    h2 + p
+        margin-top: var(--gap)
+        +ft(30, 30*1.4, 400)
+
+        +maw($md)
+            +ft(18, 18*1.4, 400)
+
+.list
+    &-check
+        li
+            +flex(flex, center, flex-start, nowrap)
+            &::before
+                content: ''
+                display: inline-flex
+                align-items: center
+                +sz(18px, 18px)
+                margin-right: var(--gapXs)
+                background: url('../../assets/icons/checked.svg') no-repeat 50% / contain
+                
+.page
+    h1, h2, h3 
+        +ft(26, 26*1.3, 700)
+    
+    h4, h5, h6
+        +ft(17, 17*1.3, 700)
+    
+    +maw($md)
+        h1, h2, h3 
+            +ft(20, 20*1.4, 700)
+
+        h4, h5, h6
+            +ft(17, 17*1.4, 700)
+
+.page-single
+
+    h1, h2, h3 
+        +ft(40, 40*1.4, 700)
+        color: $grey3
+
+    h4, h5, h6
+        +ft(28, 28*1.4, 700)
+        color: $grey3
+
+    p
+        color: $grey4
+
+        a
+            text-decoration: underline
+            color: darken($main, 20%)
+            transition: $trs
+
+            &:hover, &:active, &:focus
+                text-decoration: underline
+    
+    
+
+    p > img
+        margin: var(--gapMd) auto
+
+    +maw($md)
+        h1, h2, h3 
+            +ft(20, 20*1.4, 700)
+
+        h4, h5, h6
+            +ft(17, 17*1.4, 700)
+    
+.page-article
+    color: $grey4
+
+    & > div:first-child > *:first-child
+        margin-top: 0
+
+    h2, h3
+        +ft(40, 40*1.4, 700)
+        color: $grey3
+
+    h4, h5, h6
+        +ft(28, 28*1.4, 700)
+        color: $grey3
+
+    ul, ol
+        li
+            +flex(flex)
+            gap: var(--gapXs)
+            position: relative
+            margin-top: var(--gapXs)
+            margin-bottom: var(--gapXs)
+            color: $grey4
+            
+            &::before
+                content: ''
+                display: inline-flex
+                +sz(8px, 8px)
+                min-width: 8px
+                margin: 8px
+                border-radius: 50%
+                background-color: $main
+
+    ol
+        counter-reset: section
+        li
+            &::before 
+                counter-increment: section
+                content: counter(section)
+                +flex(inline-flex, center, center, nowrap)
+                +sz(24px, 24px)
+                min-width: 24px
+                margin: 0 8px
+                +ft(11, 11, 700)
+                background-color: lighten($main, 15%)
+                color: darken($main, 20%)
+    
+    +maw($md)
+        h2, h3
+            +ft(20, 20*1.4, 700)
+
+        h4, h5, h6
+            +ft(17, 17*1.4, 700)

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_builder_providers",
+  "info": {
+    "displayName": "Providers",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "casino_providers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::casino-provider.casino-provider"
+    }
+  }
+}

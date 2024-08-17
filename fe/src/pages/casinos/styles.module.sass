@@ -1,0 +1,65 @@
+@import 'src/styles/sass/vars.sass'
+
+
+.casino
+    &_content
+        margin-top: var(--gapLg)
+        margin-bottom: var(--gapLg)
+
+.cards
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    gap: var(--gapMd)
+        
+    &_filters
+        flex: 1 0 auto
+        max-width: 300px
+        width: 100%
+
+    &_wrap
+        padding-bottom: 50px
+        +flex(flex, flex-start, flex-start, nowrap)
+        grid-template-columns: 3fr 1fr
+        gap: var(--gapMd)
+
+    &_content
+        margin-top: var(--gapLg)
+
+    &_action
+        display: flex
+        flex-direction: column
+        gap: var(--gap)
+        //padding: var(--gapSm)
+        //box-shadow: $bxsd
+        //border: $bd1
+        border-radius: var(--brsXs)
+        width: 100%
+        font-weight: 600
+
+        & > *:first-child
+            margin-top: 0
+
+        span
+            display: block
+            margin-bottom: var(--gapXs)
+            text-transform: uppercase
+
+        b
+            font-weight: inherit
+            color: $black
+
+        & > div > div > div
+            border: none
+            border-bottom: 2px solid $main
+            border-radius: 0
+
+         
+
+    +maw(640)
+        width: 100%
+        &_wrap
+            flex-wrap: wrap
+
+    +maw($xs)
+        &_action b
+            display: none

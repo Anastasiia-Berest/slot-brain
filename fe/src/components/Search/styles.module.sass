@@ -1,0 +1,47 @@
+@import 'src/styles/sass/vars.sass'
+
+.search
+    +flex(inline-flex, center, center, nowrap)
+    box-shadow: $bxsd
+    max-width: 1250px
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+
+    &_wrap
+        position: relative
+        z-index: 2
+        +flex(flex, center, center, nowrap)
+
+   
+    &_input, &_btn
+        +flex(flex, center, center, nowrap)
+        padding: 10px 15px
+        transition: $trs
+       
+    &_input
+        border: none
+        flex: 1
+        color: $black
+
+    &_btn
+        background-color: $main
+
+        &:hover, &:focus, &:active
+            background-color: darken($main, 10%)
+        
+    &.lg
+        transform: translateY(-50%)
+
+        .search
+            &_input, &_btn
+                padding: 30px 35px
+                +maw($md)
+                    padding: 15px 15px
+
+    &.sm
+        width: auto
+        border-radius: var(--brsXs)
+        overflow: hidden
+
+

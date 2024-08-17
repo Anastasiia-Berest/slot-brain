@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_builder_videos",
+  "info": {
+    "displayName": "Video",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
